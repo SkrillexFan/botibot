@@ -15,7 +15,7 @@ client.on('ready', () => {
 
  
 
-/*client.on("message", function(message) {
+client.on("message", function(message) {
  
     var parts = message.content.split(" "); // Splits message into an array for every space, our layout: "<command> [search query]" will become ["<command>", "search query"]
  
@@ -67,7 +67,8 @@ function image(message, parts) {
  
         // Send result
         message.channel.send({files: [urls[0]]});
-    });*/
+    });
+ 
 client.on('message', message => {
 
     if (message.content === 'zab') {

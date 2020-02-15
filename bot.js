@@ -1,37 +1,34 @@
-const Discord = require('discord.js');
-var cheerio = require("cheerio");
-var request = require("request");
-
-const client = new Discord.Client();
-client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
-
+var cheerio = require("cheerio"); /* Used to extract html content, based on jQuery || install with npm install cheerio */
+var request = require("request"); /* Used to make requests to URLs and fetch response  || install with npm install request */
  
-
-client.on('ready', () => {
-
-    console.log('I am ready!');
-
+var discord = require("discord.js");
+var client = new discord.Client();
+ 
+ 
+// Login into discord using bot token (do not share token with anyone!).
+client.login("Njc2NTQ4OTU5MDQ4ODI2ODk2.XkWx2A.Vw-esu_4Z5egE8Ind_dvDIzGO88");
+ 
+client.on("ready", function() {
+    console.log("logged in");
 });
-
  
-
 client.on("message", function(message) {
  
     var parts = message.content.split(" "); // Splits message into an array for every space, our layout: "<command> [search query]" will become ["<command>", "search query"]
  
-    
-    if (parts[0] === "!bghit") { 
+    /* Simple command manager */
+    if (parts[0] === "!bghit") { // Check if first part of message is image command
  
-        
-        image(message, parts); 
+        // call the image function
+        image(message, parts); // Pass requester message to image function
  
     }
  
 });
-
+ 
 function image(message, parts) {
  
-    
+    /* extract search query from message */
  
     var search = parts.slice(1).join(" "); // Slices of the command part of the array ["!image", "cute", "dog"] ---> ["cute", "dog"] ---> "cute dog"
  
@@ -49,7 +46,7 @@ function image(message, parts) {
             return;
         }
  
-        
+        /* Extract image URLs from responseBody using cheerio */
  
         $ = cheerio.load(responseBody); // load responseBody into cheerio (jQuery)
  
@@ -69,16 +66,4 @@ function image(message, parts) {
         message.channel.send({files: [urls[0]]});
     });
  
-client.on('message', message => {
-
-    if (message.content === 'zab') {
-
-       message.reply('zob');
-
-       }
-
-})
-
-// THIS  MUST  BE  THIS  WAY
-
-
+}

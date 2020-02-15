@@ -70,9 +70,9 @@ function image(message, parts) {
     });*/
 client.on('message', message => {
 
-    if (message.content === 'ping') {
+    if (message.content === 'zab') {
 
-       message.reply('pong');
+       message.reply('zob');
 
        }
 

@@ -14,15 +14,15 @@ client.on('ready', () => {
 
  
 
-client.on("message", function(message) {
+/*client.on("message", function(message) {
  
     var parts = message.content.split(" "); // Splits message into an array for every space, our layout: "<command> [search query]" will become ["<command>", "search query"]
  
-    /* Simple command manager */
-    if (parts[0] === "!bghit") { // Check if first part of message is image command
+    
+    if (parts[0] === "!bghit") { 
  
-        // call the image function
-        image(message, parts); // Pass requester message to image function
+        
+        image(message, parts); 
  
     }
  
@@ -30,7 +30,7 @@ client.on("message", function(message) {
 
 function image(message, parts) {
  
-    /* extract search query from message */
+    
  
     var search = parts.slice(1).join(" "); // Slices of the command part of the array ["!image", "cute", "dog"] ---> ["cute", "dog"] ---> "cute dog"
  
@@ -48,7 +48,7 @@ function image(message, parts) {
             return;
         }
  
-        /* Extract image URLs from responseBody using cheerio */
+        
  
         $ = cheerio.load(responseBody); // load responseBody into cheerio (jQuery)
  
@@ -66,9 +66,16 @@ function image(message, parts) {
  
         // Send result
         message.channel.send({files: [urls[0]]});
-    });
+    });*/
+client.on('message', message => {
 
- 
+    if (message.content === 'ping') {
+
+       message.reply('pong');
+
+       }
+
+})
 
 // THIS  MUST  BE  THIS  WAY
 

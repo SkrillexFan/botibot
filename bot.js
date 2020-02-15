@@ -3,6 +3,7 @@ var cheerio = require("cheerio");
 var request = require("request");
 
 const client = new Discord.Client();
+client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
 
  
 
@@ -79,4 +80,4 @@ client.on('message', message => {
 
 // THIS  MUST  BE  THIS  WAY
 
-client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
+

@@ -6,7 +6,7 @@ var client = new discord.Client();
  
  
 // Login into discord using bot token (do not share token with anyone!).
-client.login("Njc2NTQ4OTU5MDQ4ODI2ODk2.XkWx2A.Vw-esu_4Z5egE8Ind_dvDIzGO88");
+client.login(process.env.BOT_TOKEN);
  
 client.on("ready", function() {
     console.log("logged in");

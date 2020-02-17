@@ -63,7 +63,7 @@ function image(message, parts) {
         }
  
         // Send result
-        var rnd = Math.floor(Math.random() * 5)
+        var rnd = Math.floor(Math.random() * 20)
         message.channel.send({files: [urls[rnd]]});
     });
  

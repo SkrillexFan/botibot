@@ -33,18 +33,24 @@ function image(message, parts) {
     var search = parts.slice(1).join(" "); // Slices of the command part of the array ["!image", "cute", "dog"] ---> ["cute", "dog"] ---> "cute dog"
     if(search == "khochibat" || search == "khouchibat" || search == "khochaibat" || search == "khoushibat")
     {
-      message.channel.send({files: [https://cdn.discordapp.com/attachments/665990171937996840/679482426572931082/a03a3d27b400990d7a114ea6e1e45e32.png]});
+      message.channel.send({files: ["https://cdn.discordapp.com/attachments/665990171937996840/679482426572931082/a03a3d27b400990d7a114ea6e1e45e32.png"]});
     }
     else
-     {
+    {
         var options = {
-        url: "http://results.dogpile.com/serp?qc=images&q=" + search,
-        method: "GET",
-        headers: {
-            "Accept": "text/html",
-            "User-Agent": "Chrome"
-        }
-    };
+            url: "http://results.dogpile.com/serp?qc=images&q=" + search,
+            method: "GET",
+            headers: {
+                "Accept": "text/html",
+                "User-Agent": "Chrome"
+            }
+        };
+    }
+
+
+
+
+    
     request(options, function(error, response, responseBody) {
         if (error) {
             // handle error
@@ -68,10 +74,8 @@ function image(message, parts) {
         }
  
         // Send result
-        var rnd = Math.floor(Math.random() * 5)
-        message.channel.send({files: [urls[rnd]]});            
-     }
-    
+        var rnd = Math.floor(Math.random() * 10)
+        message.channel.send({files: [urls[rnd]]});
     });
  
 }

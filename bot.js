@@ -31,12 +31,7 @@ function image(message, parts) {
     /* extract search query from message */
  
     var search = parts.slice(1).join(" "); // Slices of the command part of the array ["!image", "cute", "dog"] ---> ["cute", "dog"] ---> "cute dog"
-    if(search == "khochibat" || search == "khouchibat" || search == "khochaibat" || search == "khoushibat")
-    {
-      message.channel.send({files: ["https://cdn.discordapp.com/attachments/665990171937996840/679482426572931082/a03a3d27b400990d7a114ea6e1e45e32.png"]});
-    }
-    else
-    {
+    
         var options = {
             url: "http://results.dogpile.com/serp?qc=images&q=" + search,
             method: "GET",
@@ -45,7 +40,7 @@ function image(message, parts) {
                 "User-Agent": "Chrome"
             }
         };
-    }
+    
 
 
 

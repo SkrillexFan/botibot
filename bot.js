@@ -23,6 +23,69 @@ client.on("message", function(message) {
         image(message, parts); // Pass requester message to image function
  
     }
+    if (parts[0]=== "!wach")
+    {
+        var rnd = Math.floor(Math.random() * 10);
+        
+        if(parts[1] === "ana" )
+        {
+            if(parts[2] === "ghadi")
+            {
+                var s = parts.slice(2).join(" ");
+
+                if(rnd>5)
+                {
+                    message.channel.send("ah a sat nta chi nhar "+s)
+                }
+                else
+                {
+                    message.channel.send("la a sat nta ma3mrk ghadi "+s)
+                }
+            }
+            else
+            {
+                var s =  parts.slice(2).join(" ");
+
+                if(rnd>5)
+                {
+                    message.channel.send("ah nta " + s);
+                }
+                else
+                {
+                    message.channel.send("la nta machi " + s);
+                }
+            }
+             
+        }
+        else if(parts[1] === "ghadi")
+        {
+            var s =  parts.slice(2).join(" ");
+            if(rnd>5)
+            {
+                message.channel.send("ah a sat ghadi t"+s);
+            }
+            else
+            {
+                message.channel.send("la a sat ma3mrk ghadi t"+s);
+            }
+        }
+        else
+        {
+            var s =  parts.slice(1).join(" ");
+
+            if(rnd>5)
+            {
+                message.channel.send("Ah " + s);
+            }
+            else
+            {
+                message.channel.send("La " + s);
+            }
+            
+            
+        }
+
+    }
  
 });
  

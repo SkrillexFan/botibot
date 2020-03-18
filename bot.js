@@ -34,19 +34,19 @@ client.on("message", function(message) {
         message.channel.send({embed})
     }
  
-   /* if(parts.includes("rbk"))
+    if(parts.includes("rbk"))
     {
-        message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr rab a weld l97ba")
+        message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr lah a weld l97ba")
     }
 
     if(parts.includes("rabk"))
     {
-        message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr rab a weld l97ba")
+        message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr lah a weld l97ba")
     }
     if(parts.includes("rab"))
     {
-        message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr rab a weld l97ba")
-    }*/
+        message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr lah a weld l97ba")
+    }
 
    
     if (parts[0]=== "!wach")

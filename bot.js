@@ -38,6 +38,11 @@ client.on("message", function(message) {
     {
         message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr lah a weld l97ba")
     }
+ 
+    if(parts.includes("rbo"))
+    {
+        message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr lah a weld l97ba")
+    }
 
     if(parts.includes("rabk"))
     {

@@ -23,6 +23,12 @@ client.on("message", function(message) {
         image(message, parts); // Pass requester message to image function
  
     }
+ 
+    if(parts.search("rbk") || parts.search("rabk") || parts.search("rab"))
+    {
+        message.channel.send("@"+message.member.id +" Matb9arch t3ayr rab hadak weld l97ba ")
+    }
+   
     if (parts[0]=== "!wach")
     {
         var rnd = Math.floor(Math.random() * 10);

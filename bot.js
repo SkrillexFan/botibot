@@ -24,10 +24,30 @@ client.on("message", function(message) {
  
     }
  
-    if(parts.search("rbk") || parts.search("rabk") || parts.search("rab"))
+    if(parts[0]=="!mosa3ada")
     {
-        message.channel.send("@"+message.member.id +" Matb9arch t3ayr rab hadak weld l97ba ")
+        const embed = new discord.RichEmbed()
+        .setTitle("Hachno t9dr dir akhay sat bro 7bibi")
+        .setAuthor("ROJOLA", "","https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png")
+        .setColor("#598a39")
+        .setDescription("!bghit | !wach")
+        message.channel.send({embed})
     }
+ 
+ if(parts.includes("rbk"))
+    {
+        message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr rab a weld l97ba")
+    }
+
+    if(parts.includes("rabk"))
+    {
+        message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr rab a weld l97ba")
+    }
+    if(parts.includes("rab"))
+    {
+        message.channel.send("<@"+message.member.id+"> Matb9ach t3ayr rab a weld l97ba")
+    }
+
    
     if (parts[0]=== "!wach")
     {

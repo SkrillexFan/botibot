@@ -56,6 +56,7 @@ client.on("message", function(message) {
    
     if (parts[0]=== "!wach")
     {
+        parts = check(parts);
         var rnd = Math.floor(Math.random() * 10);
         
         if(parts[1] === "ana" )
@@ -75,6 +76,7 @@ client.on("message", function(message) {
             }
             else
             {
+                parts = check(parts);
                 var s =  parts.slice(2).join(" ");
 
                 if(rnd>5)
@@ -89,7 +91,8 @@ client.on("message", function(message) {
              
         }
         else if(parts[1] === "ghadi")
-        {
+        {   
+            parts = check(parts);
             var s =  parts.slice(2).join(" ");
             if(rnd>5)
             {
@@ -102,6 +105,7 @@ client.on("message", function(message) {
         }
         else
         {
+            parts = check(parts);
             var s =  parts.slice(1).join(" ");
 
             if(rnd>5)
@@ -119,7 +123,27 @@ client.on("message", function(message) {
     }
  
 });
- 
+ function check(arr){
+    var res=[];
+    for(x of arr)
+    {
+    	if(x.endsWith("ni"))
+        {
+        	var s = x.replace(/ni\b/,"k")
+            res.push(s);
+            
+        }
+        else if(x.startsWith("n"))
+        {
+        	res.push(x.replace("n","t"))
+        }
+        else
+        {
+        	res.push(x);
+        }
+    }
+    return res;
+}
 function image(message, parts) {
  
     /* extract search query from message */

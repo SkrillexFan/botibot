@@ -96,11 +96,11 @@ client.on("message", function(message) {
             var s =  parts.slice(2).join(" ");
             if(rnd>5)
             {
-                message.channel.send("ah a sat ghadi t"+s);
+                message.channel.send("ah a sat ghadi "+s);
             }
             else
             {
-                message.channel.send("la a sat ma3mrk ghadi t"+s);
+                message.channel.send("la a sat ma3mrk ghadi "+s);
             }
         }
         else

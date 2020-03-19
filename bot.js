@@ -64,6 +64,7 @@ client.on("message", function(message) {
             if(parts[2] === "ghadi")
             {
                 var s = parts.slice(2).join(" ");
+                
 
                 if(rnd>5)
                 {
@@ -71,6 +72,7 @@ client.on("message", function(message) {
                 }
                 else
                 {
+                    s.replace("kayn","makaynch")
                     message.channel.send("la a sat nta ma3mrk ghadi "+s)
                 }
             }
@@ -114,6 +116,7 @@ client.on("message", function(message) {
             }
             else
             {
+                s.replace("kayn","makaynch")
                 message.channel.send("La " + s);
             }
             

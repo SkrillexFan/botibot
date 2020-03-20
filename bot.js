@@ -11,6 +11,12 @@ client.login(process.env.BOT_TOKEN);
 client.on("ready", function() {
     console.log("logged in");
 });
+
+bot.on("ready",() => {
+ 
+ bot.user.setStatus("!mosa3ada")
+ 
+});
  
 client.on("message", function(message) {
  

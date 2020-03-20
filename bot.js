@@ -9,9 +9,7 @@ var client = new discord.Client();
 client.login(process.env.BOT_TOKEN);
  
 client.on("ready", function() {
- 
     console.log("logged in");
-    client.user.setActivity("with mok");
 });
  
 client.on("message", function(message) {

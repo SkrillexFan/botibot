@@ -13,23 +13,7 @@ client.on("ready", function() {
 });
 
 client.on("ready",function(){
-    while(true)
-    {
-        setTimeout(function () {
-            client.user.setActivity("with babak");
-          }, 10000);
-          setTimeout(function () {
-            client.user.setActivity("with khtk");
-          }, 10000);
-          setTimeout(function () {
-            client.user.setActivity("with mamak");
-          }, 10000);
-          setTimeout(function () {
-            client.user.setActivity("with khok");
-          }, 10000);
-    }
-     
-    
+            client.user.setActivity("with mok");
 })
  
 client.on("message", function(message) {

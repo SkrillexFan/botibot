@@ -26,7 +26,7 @@ client.on("message", function(message) {
     if(parts.includes("!ping"))
      {
         var ping = Date.now() - message.createdTimestamp + " ms";
-        message.channel.sendMessage("Your ping is `" + `${Date.now() - message.createdTimestamp}` + " ms`");
+        message.channel.sendMessage("Ping dyalk a 7bibi howa `" + `${Date.now() - message.createdTimestamp}` + " ms`");
      }
  
     if(parts[0]=="!mosa3ada")

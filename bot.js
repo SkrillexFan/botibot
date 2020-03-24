@@ -15,7 +15,7 @@ client.on("ready", function() {
 client.on("message", function(message) {
  
     var parts = message.content.split(" "); // Splits message into an array for every space, our layout: "<command> [search query]" will become ["<command>", "search query"]
- 
+    
     /* Simple command manager */
     if (parts[0] === "!bghit") { // Check if first part of message is image command
  
@@ -196,7 +196,7 @@ function image(message, parts) {
  
         // Send result
         var rnd = Math.floor(Math.random() * 10)
-        message.channel.send({files: [urls[rnd]]});
+        message.channel.send("hak hahowa "+ search +{files: [urls[rnd]]});
     });
  
 }

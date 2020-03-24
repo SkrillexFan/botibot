@@ -25,7 +25,7 @@ client.on("message", function(message) {
     }
     if(parts.includes("!ping"))
      {
-         message.channel.send(Math.floor(Math.random() * 250) + "ms")
+         message.channel.send(Date.now() - message.createdTimestamp + "ms";)
      }
  
     if(parts[0]=="!mosa3ada")

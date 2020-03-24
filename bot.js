@@ -23,6 +23,10 @@ client.on("message", function(message) {
         image(message, parts); // Pass requester message to image function
  
     }
+    if(parts.includes("!ping"))
+     {
+         message.channel.send(Math.floor(Math.random() * 250) + "ms")
+     }
  
     if(parts[0]=="!mosa3ada")
     {

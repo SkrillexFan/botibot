@@ -196,7 +196,7 @@ function image(message, parts) {
  
         // Send result
         var rnd = Math.floor(Math.random() * 10)
-        message.channel.send("hak hahowa "+ search +{files: [urls[rnd]]});
+        message.channel.send({files: [urls[rnd]]});
     });
  
 }

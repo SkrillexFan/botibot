@@ -26,7 +26,7 @@ client.on("message", function(message) {
     if(parts.includes("!ping"))
      {
         var ping = Date.now() - message.createdTimestamp + " ms";
-        message.channel.sendMessage("Ping dyalk a 7bibi howa `" + `${Date.now() - message.createdTimestamp}` + " ms`");
+        message.channel.sendMessage("Ping dyalk a 7bibi howa `" + `${Date.now() - message.createdTimestamp}` + " ms` ");
      }
  
     if(parts[0]=="!mosa3ada")
@@ -35,7 +35,7 @@ client.on("message", function(message) {
         .setTitle("Hachno t9dr dir akhay sat bro 7bibi")
         .setAuthor("ROJOLA", "","https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png")
         .setColor("#598a39")
-        .setDescription("!bghit | !wach")
+        .setDescription("`!bghit` | `!wach` | `!ping`")
         message.channel.send({embed})
     }
  

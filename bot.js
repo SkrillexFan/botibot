@@ -29,6 +29,19 @@ client.on("message", function(message) {
         message.channel.sendMessage("Ping dyalk a 7bibi howa `" + `${Date.now() - message.createdTimestamp}` + " ms` ");
      }
  
+    if(parts.includes("!corona"))
+     {
+        var request = new XMLHttpRequest()
+        
+        request.open('GET', 'https://coronavirus-19-api.herokuapp.com/countries/morocco', true)
+      
+        request.onload = function() {
+         var data = JSON.parse(this.response)
+         message.channel.sendMessage(data.country);
+        }
+       request.send()
+     }
+ 
     if(parts[0]=="!mosa3ada")
     {
         const embed = new discord.RichEmbed()

@@ -31,6 +31,8 @@ client.on("message", function(message) {
  
     if(parts.includes("!corona"))
      {
+            
+         
         getJSON('https://coronavirus-19-api.herokuapp.com/countries/morocco', function(error, response){
             var cases = response.cases;
             var today = response.todayCases;
@@ -82,6 +84,7 @@ client.on("message", function(message) {
               message.channel.send({ embed });
             
         })
+     }
  
     if(parts[0]=="!mosa3ada")
     {

@@ -41,7 +41,7 @@ client.on("message", function(message) {
             var recovered = response.recovered;
             var critical = response.critical;
             const embed = {
-                "url": "https://discordapp.com",
+                "url": "https://www.worldometers.info/coronavirus/",
                 "color": 13112903,
                 "timestamp": "2020-04-02T21:44:11.446Z",
                 "footer": {

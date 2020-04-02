@@ -1,6 +1,6 @@
 var cheerio = require("cheerio"); /* Used to extract html content, based on jQuery || install with npm install cheerio */
 var request = require("request"); /* Used to make requests to URLs and fetch response  || install with npm install request */
- 
+var getJSON = require('get-json');
 var discord = require("discord.js");
 var client = new discord.Client();
  
@@ -31,16 +31,57 @@ client.on("message", function(message) {
  
     if(parts.includes("!corona"))
      {
-        var request = new XMLHttpRequest()
-        
-        request.open('GET', 'https://coronavirus-19-api.herokuapp.com/countries/morocco', true)
-      
-        request.onload = function() {
-         var data = JSON.parse(this.response)
-         message.channel.sendMessage(data.country);
-        }
-       request.send()
-     }
+        getJSON('https://coronavirus-19-api.herokuapp.com/countries/morocco', function(error, response){
+            var cases = response.cases;
+            var today = response.todayCases;
+            var deaths = response.deaths;
+            var tdeaths = response.todayDeaths;
+            var recovered = response.recovered;
+            var critical = response.critical;
+            const embed = {
+                "url": "https://discordapp.com",
+                "color": 13112903,
+                "timestamp": "2020-04-02T21:44:11.446Z",
+                "footer": {
+                  "icon_url": "https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png",
+                  "text": "kamlin ghadi nmoto"
+                },
+                "author": {
+                  "name": "Corona tnik mon kho",
+                  "url": "https://discordapp.com",
+                  "icon_url": "https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png"
+                },
+                "fields": [
+                  {
+                    "name": "Active Cases",
+                    "value": "`"+cases+"`",
+                    "inline": true
+                  },
+                  {
+                    "name": "New Cases",
+                    "value": "`+"+today+"`"
+                  },
+                  {
+                    "name": "Total Deaths",
+                    "value": "`"+deaths+"`"
+                  },
+                  {
+                    "name": "New Deaths",
+                    "value": "`+"+tdeaths+"`"
+                  },
+                  {
+                    "name": "Recovered",
+                    "value": "`"+recovered+"`"
+                  },
+                  {
+                    "name": "Critical",
+                    "value": "`"+critical+"`"
+                  }
+                ]
+              };
+              message.channel.send({ embed });
+            
+        })
  
     if(parts[0]=="!mosa3ada")
     {
@@ -48,7 +89,7 @@ client.on("message", function(message) {
         .setTitle("Hachno t9dr dir akhay sat bro 7bibi")
         .setAuthor("ROJOLA", "","https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png")
         .setColor("#598a39")
-        .setDescription("`!bghit` | `!wach` | `!ping`")
+        .setDescription("`!bghit` | `!wach` | `!ping` | `!corona`")
         message.channel.send({embed})
     }
  

@@ -84,7 +84,7 @@ client.on("message", function(message) {
             
         })
      }
-  if(parts[0]=="!wjah")
+ /* if(parts[0]=="!wjah")
     {
           const avatar = message.mentions.users.first() || message.author;
           const user = message.author;
@@ -103,9 +103,9 @@ client.on("message", function(message) {
           };
           message.channel.send({embed});
 
-    }
+    }*/
  
-    if(parts[0]=="!mosa3ada")
+   /* if(parts[0]=="!mosa3ada")
     {
         const embed = new discord.RichEmbed()
         .setTitle("Hachno t9dr dir akhay sat bro 7bibi")
@@ -113,7 +113,7 @@ client.on("message", function(message) {
         .setColor("#598a39")
         .setDescription("`!bghit` | `!wach` | `!ping` | `!corona`" | `!wjah` ")
         message.channel.send({embed})
-    }
+    }*/
  
     if(parts.includes("rbk"))
     {

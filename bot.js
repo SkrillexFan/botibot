@@ -91,7 +91,7 @@ client.on("message", function(message) {
           let username = user.username;
           const embed = {
             "color": 5868089,
-            "description": "`"+username + " bgha tswira ta3 " + avatar.username + "`"
+            "description": "*"+username + " bgha tswira ta3 " + avatar.username + "*"
             ,
             "image": {
               "url": avatar.avatarURL
@@ -111,7 +111,7 @@ client.on("message", function(message) {
         .setTitle("Hachno t9dr dir akhay sat bro 7bibi")
         .setAuthor("ROJOLA", "","https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png")
         .setColor("#598a39")
-        .setDescription("`!bghit` | `!wach` | `!ping` | `!wjah`")
+        .setDescription("`!bghit` | `!wach` | `!ping` | `!wjah` | `corona`")
         message.channel.send({embed})
     }
  

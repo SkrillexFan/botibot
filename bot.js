@@ -84,7 +84,7 @@ client.on("message", function(message) {
             
         })
      }
- /* if(parts[0]=="!wjah")
+  if(parts[0]=="!wjah")
     {
           const avatar = message.mentions.users.first() || message.author;
           const user = message.author;
@@ -103,17 +103,17 @@ client.on("message", function(message) {
           };
           message.channel.send({embed});
 
-    }*/
+    }
  
-   /* if(parts[0]=="!mosa3ada")
+    if(parts[0]=="!mosa3ada")
     {
         const embed = new discord.RichEmbed()
         .setTitle("Hachno t9dr dir akhay sat bro 7bibi")
         .setAuthor("ROJOLA", "","https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png")
         .setColor("#598a39")
-        .setDescription("`!bghit` | `!wach` | `!ping` | `!corona`" | `!wjah` ")
+        .setDescription("`!bghit` | `!wach` | `!ping` | `!wjah`")
         message.channel.send({embed})
-    }*/
+    }
  
     if(parts.includes("rbk"))
     {

@@ -84,6 +84,26 @@ client.on("message", function(message) {
             
         })
      }
+  if(parts[0]=="!wjah")
+    {
+          const avatar = message.mentions.users.first() || message.author;
+          const user = message.author;
+          let username = user.username;
+          const embed = {
+            "color": 5868089,
+            "description": "`"+username + " bgha tswira ta3 " + avatar.username + "`"
+            ,
+            "image": {
+              "url": avatar.avatarURL
+            },
+            "author": {
+              "name": username,
+              "icon_url": user.avatarURL
+            }
+          };
+          message.channel.send({embed});
+
+    }
  
     if(parts[0]=="!mosa3ada")
     {
@@ -91,7 +111,7 @@ client.on("message", function(message) {
         .setTitle("Hachno t9dr dir akhay sat bro 7bibi")
         .setAuthor("ROJOLA", "","https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png")
         .setColor("#598a39")
-        .setDescription("`!bghit` | `!wach` | `!ping` | `!corona`")
+        .setDescription("`!bghit` | `!wach` | `!ping` | `!corona`" | `!wjah`)
         message.channel.send({embed})
     }
  
@@ -249,10 +269,30 @@ function image(message, parts) {
             // Handle no results
             return;
         }
- 
-        // Send result
+         // Send result
         var rnd = Math.floor(Math.random() * 10)
-        message.channel.send({files: [urls[rnd]]});
+        const user = message.author;
+        let username = user.username
+        let avatar = user.avatarURL;
+        let query = parts.slice(1).join(" ");
+       // let url = urls[rnd];
+        let url = urls[rnd];
+       // message.channel.send(url)
+        const embed = {
+            "color": 5868089,
+            "description": query
+            ,
+            "image": {
+              "url": url
+            },
+            "author": {
+              "name": username,
+              "icon_url": avatar
+            }
+          };
+     
+          message.channel.send({ embed });
+      //  message.channel.send({files: [urls[rnd]]});
     });
  
 }

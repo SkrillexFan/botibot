@@ -34,10 +34,31 @@ client.on("message", function(message) {
             var quote = '"' + response.quote + '"';
          const embed = {
             "color": 5868089,
-            "description": "`"+quote+"`"
+            "description": "`"+quote+"`",
+                "author": {
+                  "name": "Kanye quotes",
+                  "icon_url": "https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png"
+                }
          }
               message.channel.send({ embed });
         })
+     }
+ if(parts.includes("!kanye"))
+     {
+        getJSON('https://icanhazdadjoke.com/slack', function(error, response){
+            var rep = response.attachments[0].text; 
+            const embed = {
+            "color": 5868089,
+            "description": "`"+rep+"`",
+                "author": {
+                  "name": "Dad jokes",
+                  "icon_url": "https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png"
+                }
+         }
+              message.channel.send({ embed });
+        })
+        
+       
      }
  
  

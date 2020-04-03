@@ -43,10 +43,10 @@ client.on("message", function(message) {
               message.channel.send({ embed });
         })
      }
- if(parts.includes("!kanye"))
+ if(parts.includes("!dad"))
      {
         getJSON('https://icanhazdadjoke.com/slack', function(error, response){
-            var rep = response.attachments[0].text; 
+            var rep = response.attachments[0].text
             const embed = {
             "color": 5868089,
             "description": "`"+rep+"`",
@@ -145,7 +145,7 @@ client.on("message", function(message) {
         .setTitle("Hachno t9dr dir akhay sat bro 7bibi")
         .setAuthor("ROJOLA", "","https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png")
         .setColor("#598a39")
-        .setDescription("`!bghit` | `!wach` | `!ping` | `!wjah` | `!corona`")
+        .setDescription("`!bghit` | `!wach` | `!ping` | `!wjah` | `!corona` | `!kanye` | `!dad`")
         message.channel.send({embed})
     }
  

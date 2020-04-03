@@ -42,11 +42,10 @@ client.on("message", function(message) {
             var critical = response.critical;
             const embed = {
                 "url": "https://www.worldometers.info/coronavirus/",
-                "color": 13112903,
-                "timestamp": "2020-04-02T21:44:11.446Z",
+                "color": 5868089,
                 "footer": {
                   "icon_url": "https://cdn.discordapp.com/attachments/658879571520913408/666277021311041547/3.0.png",
-                  "text": "kamlin ghadi nmoto"
+                  "text": "kamlin ghadi nmoto ila matata"
                 },
                 "author": {
                   "name": "Corona tnik mon kho",

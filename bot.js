@@ -28,6 +28,19 @@ client.on("message", function(message) {
         var ping = Date.now() - message.createdTimestamp + " ms";
         message.channel.sendMessage("Ping dyalk a 7bibi howa `" + `${Date.now() - message.createdTimestamp}` + " ms` ");
      }
+  if(parts.includes("!kanye"))
+     {
+        getJSON('https://api.kanye.rest/', function(error, response){
+            var quote = '"' + response.quote + '"';
+         const embed = {
+            "color": 5868089,
+            "description": "`"+quote+"`"
+         }
+              message.channel.send({ embed });
+        })
+     }
+ 
+ 
  
     if(parts.includes("!corona"))
      {

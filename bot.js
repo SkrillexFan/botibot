@@ -57,25 +57,7 @@ client.on("message", function(message) {
          }
               message.channel.send({ embed });
         })
-      if(parts.includes("!cat"))
-     {
-       getJSON('https://api.thecatapi.com/v1/images/search', function(error, response){
-            var rep = response[0].url; 
-            const embed = {
-            "color": 5868089,
-             
-            "image": {
-              "url": rep
-            }
-         }
-              message.channel.send({ embed });
-        })
-        
-       
      }
- 
- 
- 
     if(parts.includes("!corona"))
      {
             

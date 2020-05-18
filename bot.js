@@ -323,7 +323,11 @@ function image(message, parts) {
        // message.channel.send(url)
         const embed = {
             "color": 5868089,
-            "description": query
+            "description": query,
+            "footer": {
+      "icon_url": "https://cdn.discordapp.com/app-icons/676548959048826896/e15889ad94efdb14d49e1d2d7e33e599.png?size=256"
+             ,
+             "text": "this bot was made by : RYUK#2572 }
             ,
             "image": {
               "url": url

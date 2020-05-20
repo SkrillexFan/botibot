@@ -10,6 +10,13 @@ client.login(process.env.BOT_TOKEN);
  
 client.on("ready", function() {
     console.log("logged in");
+ client.user.setPresence({
+      status: "online",  //You can show online, idle....
+      game: {
+          name: "!mosa3ada",  //The message shown
+          type: "WATCHING" //PLAYING: WATCHING: LISTENING: STREAMING:
+      }
+  });
 });
  
 client.on("message", function(message) {

@@ -10,6 +10,7 @@ client.login(process.env.BOT_TOKEN);
  
 client.on("ready", function() {
     console.log("logged in");
+    client.user.setActivity('!mosa3ada', { type: 'WATCHING' });
    
 });
  
